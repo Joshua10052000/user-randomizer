@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/output.css" />
+    <title>User Randomizer</title>
+  </head>
+  <body class="min-h-screen bg-background font-sans antialiased pt-16">
+    <main class="container mx-auto">
+      <article class="rounded-lg border bg-card text-card-foreground shadow-sm">
+        <section class="flex flex-col space-y-1.5 p-6">
+          <h3 class="text-2xl font-semibold leading-none tracking-tight">
+            User Randomizer
+          </h3>
+          <p class="text-sm text-muted-foreground">
+            Generate a user, you can select a options below.
+          </p>
+        </section>
+        <section class="p-6 pt-0">
+          <div class="flex justify-center items-center flex-col gap-4">
+            <div class="rounded-full overflow-hidden">
+              <img
+                class="object-cover"
+                src="./public/media/placeholder.svg"
+                width="300"
+                height="300"
+              />
+            </div>
+            <form class="grid gap-2">
+              <div class="grid gap-2">
+                <label
+                  for="gender"
+                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Gender
+                </label>
+                <div class="grid grid-cols-2 gap-2">
+                  <label
+                    for="gender-male"
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-blue-500 text-primary-foreground hover:bg-blue-500/90 h-10 px-4 py-2 border [&:has(input:checked)]:border-primary cursor-pointer"
+                  >
+                    <input
+                      id="gender-male"
+                      name="gender"
+                      type="radio"
+                      value="male"
+                      class="sr-only"
+                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="6" />
+                      <line x1="12" y1="12" x2="12" y2="4" />
+                      <line x1="12" y1="4" x2="16" y2="8" />
+                    </svg>
+                    <span>Male</span>
+                  </label>
+                  <label
+                    for="gender-female"
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-pink-500 text-primary-foreground hover:bg-pink-500/90 h-10 px-4 py-2 border [&:has(input:checked)]:border-primary cursor-pointer"
+                  >
+                    <input
+                      id="gender-female"
+                      name="gender"
+                      value="female"
+                      type="radio"
+                      class="sr-only"
+                    />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="6" />
+                      <line x1="12" y1="18" x2="12" y2="24" />
+                      <line x1="9" y1="24" x2="15" y2="24" />
+                    </svg>
+                    <span>Female</span>
+                  </label>
+                </div>
+              </div>
+              <div class="grid gap-2">
+                <label
+                  for="nationality"
+                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Nationality
+                </label>
+                <select
+                  name="nationality"
+                  id="nationality"
+                  class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1"
+                >
+                  <optgroup
+                    class="py-1.5 pl-8 pr-2 text-sm font-semibold"
+                    label="Select a nationality"
+                  >
+                    <option
+                      value="au"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Australia
+                    </option>
+                    <option
+                      value="br"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Brazil
+                    </option>
+                    <option
+                      value="ca"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Canada
+                    </option>
+                    <option
+                      value="ch"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Switzerland
+                    </option>
+                    <option
+                      value="de"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Germany
+                    </option>
+                    <option
+                      value="dk"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Denmark
+                    </option>
+                    <option
+                      value="es"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Spain
+                    </option>
+                    <option
+                      value="fi"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Finland
+                    </option>
+                    <option
+                      value="fr"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      France
+                    </option>
+                    <option
+                      value="gb"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      United Kingdom
+                    </option>
+                    <option
+                      value="ie"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Ireland
+                    </option>
+                    <option
+                      value="in"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      India
+                    </option>
+                    <option
+                      value="ir"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Iran
+                    </option>
+                    <option
+                      value="mx"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Mexico
+                    </option>
+                    <option
+                      value="nl"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Netherlands
+                    </option>
+                    <option
+                      value="no"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Norway
+                    </option>
+                    <option
+                      value="nz"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      New Zealand
+                    </option>
+                    <option
+                      value="rs"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Serbia
+                    </option>
+                    <option
+                      value="tr"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Turkey
+                    </option>
+                    <option
+                      value="ua"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      Ukraine
+                    </option>
+                    <option
+                      value="us"
+                      class="relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+                    >
+                      United States
+                    </option>
+                  </optgroup>
+                </select>
+              </div>
+              <button
+                id="submit-btn"
+                type="submit"
+                class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+              >
+                Continue
+              </button>
+            </form>
+          </div>
+        </section>
+        <section class="flex items-center p-6 pt-0 overflow-auto">
+          <table class="w-full caption-bottom text-sm">
+            <thead class="[&_tr]:border-b">
+              <tr
+                class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+              >
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                >
+                  Name
+                </th>
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                >
+                  Email
+                </th>
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                >
+                  Gender
+                </th>
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                >
+                  Birthday
+                </th>
+                <th
+                  class="h-12 px-4 text-left align-middle font-medium text-muted-foreground"
+                >
+                  Address
+                </th>
+              </tr>
+            </thead>
+            <tbody class="[&_tr:last-child]:border-0">
+              <tr
+                class="border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted"
+              >
+                <td class="p-4 align-middle [&:has([role=checkbox])]:pr-0"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+    </main>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
